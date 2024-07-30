@@ -2,6 +2,10 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/fireba
 
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
 
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+
+//Firestore cdns
+
 const firebaseConfig = {
   apiKey: "AIzaSyCxVDP6qSZt5e3qdAyKYEf5YwFa4HFsHtM",
   authDomain: "fir-authentication-956b7.firebaseapp.com",
@@ -15,3 +19,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+export const db = getFirestore(app);
+
+//Firestore cdn

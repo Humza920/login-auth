@@ -9,7 +9,7 @@ import {
   getDocs,
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
-import { auth, db } from "./config.js";
+import { auth , db } from "./config.js";
 
 //Firestore some cdn
 
@@ -33,7 +33,7 @@ onAuthStateChanged(auth, (user) => {
     userProfile.src = `${userPhoto}`;
     userDisplayName.innerHTML = `${user.displayName}`;
   } else {
-    window.location = "login.html";
+    window.location = "index.html";
   }
 });
 
@@ -45,7 +45,7 @@ logOutBtn.addEventListener("click", () => {
   signOut(auth)
     .then(() => {
       alert("You are Logout Sucessfully");
-      window.location = "login.html";
+      window.location = "index.html";
     })
     .catch((error) => {
       console.log(error);
